@@ -24,6 +24,10 @@ const modalDelete = document.querySelector('.modal_delete');
 const modalEdit = document.querySelector('.modal_edit');
 console.log('modalEdit', modalEdit);
 
+document.addEventListener('DOMContentLoaded', () => {
+  getTasks();
+});
+
 const closeBtnModalAdd = document.querySelector('.close');
 console.log(modalAdd);
 
