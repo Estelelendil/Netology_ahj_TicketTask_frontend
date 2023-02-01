@@ -1,0 +1,177 @@
+.list{
+/* background-image: url('../img/list-v-kletku-a4.jpg'); */
+width: 100%;
+height: 100%;
+max-width: 1000px;
+background-repeat: no-repeat;
+background-size: cover;
+padding:20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.collapse{
+  padding: 15px;
+  background-color: blue;
+}
+
+.collapsible{
+  background-color: blue;
+  opacity: 0.6;
+  border-radius: 20px;
+  color:white;
+  text-align: center;
+  cursor:pointer;
+  padding: 18px;
+    width: 15%;
+    border:none;
+    text-align:center;
+    outline: none;
+    font-size: 15px;
+}
+.active, 
+.collapsible:hover{
+  background-color: #555;
+}
+.content{
+max-width: 1000px;
+}
+
+.btn, .input{
+  border: 1px solid black;
+  border-radius: 15px;
+  /* height: 40px; */
+padding-left: 15px;
+padding-right: 15px;
+padding-top: 10px;
+padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.item{
+  width: 80%;
+  /* height: 50px; */
+  border:1px solid black;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.true{
+  background-image: url('../img/index2.png');
+  width: 30px;
+  height: 30px;
+  
+  background-repeat: no-repeat;
+  background-size: contain;
+  border:none;
+}
+.false{
+  border:2px solid black;
+  width: 30px;
+  height: 30px;
+  border-radius: 25px;
+  background-color: white;
+}
+.delete{
+  background-image: url('../img/delete2.png');
+  width: 20px;
+  height: 20px;
+  border:1px solid black;
+border-radius: 15px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border:none;
+}
+
+.edit{
+  background-image: url('../img/pen.png');
+  width: 20px;
+  height: 20px;
+  padding: 20px;
+  background-color: bisque;
+border:1px solid black;
+border-radius: 15px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border:none;
+}
+
+.container{
+  width: 100%;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.buttons{
+flex-shrink: 1;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.box{
+  /* width: 80px; */
+  display:flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal_add{
+  position: absolute;
+  margin: auto;
+  left:30%;
+  margin-top: 100px;
+  background-color: white;
+  display: none;
+}
+.modal_edit{
+  position: absolute;
+  margin: auto;
+  left:30%;
+  margin-top: 100px;
+  background-color: white;
+  display: none;
+}
+.subscribe-form{
+  width: 300px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px;
+
+
+border: 1px solid black;
+border-radius: 20px;
+}
+
+.modal_delete{
+  position: absolute;
+  margin: auto;
+  left:30%;
+  margin-top: 100px;
+  background-color: white;
+  display: none;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 20px;
+  position: fixed;
+}
+
+.description{
+display: none;
+}

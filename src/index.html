@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="modal_add">
+
+    <form class="update-form " method="PATCH" action="http://localhost:7070" enctype="multipart/form-data">
+        <h4>добавить тикет</h4>
+        <div class="box">
+          <input class="input" name="name" placeholder="название" required>
+
+          <input class="input" name="description" placeholder="описание" required>
+        </div>
+   
+        <div class="container">
+
+          <button class="btn create" type="submit">Ok</button>
+          <button class="btn close" type="button">Отмена</button>
+        </div>
+      </form>
+
+  </div>
+  <div class="modal_edit">
+
+    <form class="subscribe-form " method="POST" action="http://localhost:7070" enctype="multipart/form-data">
+        <h4>Обновить тикет</h4>
+        <div class="box">
+          <input class="input name" name="name" placeholder="название" required>
+
+          <input class="input text" name="description" placeholder="описание" required>
+        </div>
+   
+        <div class="container">
+
+          <button class="save btn" type="submit">Ok</button>
+          <button class="cansel btn" type="button">Отмена</button>
+        </div>
+      </form>
+
+  </div>
+
+  <div class="modal_delete">
+    <h4>Вы уверены, что хотите удалить тикет?</h4>
+    <div class="container">
+      <button class="btn yes" >Да</button>
+
+      <button class="btn no" >Нет</button>
+    </div>
+  </div>
+  <div class="container content">
+
+    <button class="upload btn" >Обновить тикеты</button>
+    <button class="add_button btn" >Добавить тикет</button>
+  </div>
+  <div class = 'list'>
+
+  </div>
+  
+</body>
+<script src="/src/index.js"></script> 
+</html>
