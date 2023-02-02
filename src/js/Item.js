@@ -11,8 +11,10 @@ export default class Item {
   pushItem(parent) {
     this.element.classList.add('item');
     this.element.setAttribute('id', this.id);
+
     const container = document.createElement('div');
     container.classList.add('container');
+
     const checkbox = document.createElement('button');
     checkbox.classList.add(`${this.status}`, 'checkbox');
     container.append(checkbox);
@@ -27,8 +29,10 @@ export default class Item {
 
     const buttonBox = document.createElement('div');
     buttonBox.classList.add('buttons');
+
     const buttonEdit = document.createElement('button');
     buttonEdit.classList.add('edit', 'btn');
+
     const buttonDelete = document.createElement('button');
     buttonDelete.classList.add('delete', 'btn');
     buttonBox.append(buttonEdit);
