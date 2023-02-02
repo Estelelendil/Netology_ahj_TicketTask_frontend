@@ -91,6 +91,7 @@ function addItemFunctionality() {
     });
 
     btnDelete.addEventListener('click', () => {
+      // debugger;
       deleteTask(id);
     });
 
@@ -136,26 +137,43 @@ function addDascription(element, id) {
 }
 function deleteTask(id) {
   modalDelete.style.display = 'flex';
-  const yesBtn = modalDelete.querySelector('yes');
-  const noBtn = modalDelete.querySelector('no');
-  console.log(yesBtn, noBtn);
-  modalDelete.addEventListener('click', (e) => {
-    if (e.target.className.includes('no')) {
-      console.log('e.target', e.target);
-      modalDelete.style.display = 'none';
-    } else {
-      const xhr = new XMLHttpRequest();
-      xhr.onreadystatechange = () => {
-        if (xhr.readyState !== 4);
-        return null;
-        // alert(xhr.responseText);
-      };
-      xhr.open('DELETE', `http://localhost:7070?method=deleteTicketById&id=${id}`);
-      xhr.send();
-      modalDelete.style.display = 'none';
-      getTasks();
-    }
+  const yesBtn = modalDelete.querySelector('.yes');
+  const noBtn = modalDelete.querySelector('.no');
+  noBtn.addEventListener('click', () => {
+    modalDelete.style.display = 'none';
   });
+  yesBtn.addEventListener('click', () => {
+    // debugger;
+    modalDelete.style.display = 'none';
+    const xhr = new XMLHttpRequest();
+    // xhr.onreadystatechange = () => {
+    //   if (xhr.readyState !== 4);// перехожу почему-то сюда
+    //   console.log('ошибка 400');
+    //   // return null;
+    // };
+    xhr.open('DELETE', `http://localhost:7070?method=deleteTicketById&id=${id}`);
+    xhr.send();
+    xhr.addEventListener('load', () => {
+      if (xhr.status >= 200 && xhr.status < 300) {
+        console.log('ответ', xhr.responseText);
+        try {
+          const data = JSON.parse(xhr.responseText);
+          console.log('Data', data);
+
+          getTasks();// вызываю не дожидаюсь ответа
+        } catch (err) {
+          console.error(err);
+        }
+      }
+    });
+  });
+  // modalDelete.addEventListener('click', (e) => {
+  //   if (e.target.className.includes('no')) {
+  //     console.log('e.target', e.target);
+  //     modalDelete.style.display = 'none';
+  //   } else {
+  //   }
+  // });
 }
 
 function getTasks() {
